@@ -1,0 +1,9 @@
+<%= simple_form_for @translation do |f| %>
+  <%= f.input :english %>
+  <%= f.input :russian %>
+  <%= f.button :submit %>
+<% end %>
+
+<% @translations.each do |translation| %>
+  <p><%= translation.english %> - <%= translation.russian %></p>
+<% end %>
